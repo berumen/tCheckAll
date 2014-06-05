@@ -8,8 +8,8 @@ It was built using the jQuery library.
 Author
 ------
 Copyright (c) 2014 Alfredo Berumen Saldivar <br>
-<a href="http://berumen.pw" target="_blank">http://berumen.pw</a> <br>
-<a href="https://twitter.com/berumen">@berumen</a><br>
+<a target="_blank" href="http://berumen.pw">http://berumen.pw</a> <br>
+<a target="_blank" href="https://twitter.com/berumen">@berumen</a><br>
 
 
 
@@ -20,14 +20,14 @@ Don't forget to add the jQuery library (version 1.9+).
 
 	<head>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="/jquery.tcheckall.min.js"></script>
+        <script type="text/javascript" src="jquery.tcheckall.min.js"></script>
     </head>
 
 Just put your 'Check All' link, button or any clickable element identified by an id inside a <fieldset> tag, use whatever name you wish for the id.
 For example:
 	
 	<div id="my_id">
-  		<fieldset style="width: 5%">
+  		<fieldset>
 			<legend>Select</legend>
 			<a href="javascript:void(0)" id="all"> Select All</a><br />
     		<input type="checkbox" name="my_name[]" value="1" />1<br />
@@ -64,7 +64,7 @@ You can use the following custom events and add your own code
 Example
 -------
 For a live demonstration visit:
-<a href="http://jsfiddle.net/berumen/2nx2B/" target="_blank">tShift demo</a>
+<a href="http://jsfiddle.net/berumen/nAs95/" target="_blank">tCheckAll demo</a>
 
 Or visit the official web page:
 <a href="http://berumen.github.io/tCheckAll/" target="_blank">Official site</a>
