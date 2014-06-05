@@ -20,7 +20,6 @@
 
         <p class="view"><a href="https://github.com/berumen/tCheckAll">View the Project on GitHub <small>berumen/tCheckAll</small></a></p>
 
-
         <ul>
           <li><a href="https://github.com/berumen/tCheckAll/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/berumen/tCheckAll/tarball/master">Download <strong>TAR Ball</strong></a></li>
@@ -29,36 +28,112 @@
       </header>
       <section>
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>tCheckAll, What is this?</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>tCheckAll is a jquery plugin that allows you to check or uncheck all your checkboxes. <br/>
+It was built using the jQuery library.</p>
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Author</h3>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>
+Copyright (c) 2014 Alfredo Berumen Saldivar
+<br/>
+<a target="_blank" href="http://berumen.pw" >http://berumen.pw</a>
+<br/>
+<a target="_blank" href="https://twitter.com/berumen" class="user-mention">@berumen</a>
+</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>How to use</h3>
+
+<p>
+Include tCheckAll plugin in your website directory then load files in the
+<br/>
+section of your HTML document. Don't forget to add the jQuery library (version 1.9+).
+</p>
+<pre><code>
+&lt;script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"&gt;&lt;/script&gt;<br />
+&lt;script type="text/javascript" src="jquery.tcheckall.min.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>
+Just put your 'Check All' link, button or any clickable element identified by an id inside a fieldset tag, use whatever name you wish for the id. For example:
+</p>
+<pre><code>
+&lt;form id="my_id"&gt;<br />
+  &lt;fieldset&gt;<br />
+    &lt;legend&gt;Select&lt;/legend&gt;<br />
+    &lt;a href="javascript:void(0)" id="all"&gt; Select All&lt;/a&gt;&lt;br /&gt;<br />
+    &lt;input type="checkbox" name="my_name[]" value="1" /&gt;1&lt;br /&gt;<br />
+    &lt;input type="checkbox" name="my_name[]" value="2" /&gt;2&lt;br /&gt;<br />
+    &lt;input type="checkbox" name="my_name[]" value="3" /&gt;3&lt;br /&gt;<br />
+    &lt;input type="checkbox" name="my_name[]" value="4" /&gt;4&lt;br /&gt;<br />
+    &lt;input type="checkbox" name="my_name[]" value="5" /&gt;5&lt;br /&gt;<br />
+  &lt;/fieldset&gt;<br />
+&lt;/form&gt;
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>
+Trigger the plugin using the following code:
+</p>
+
+<pre><code>
+$(document).ready(function() {
+  $('#all').tCheckAll();      
+});
+</code></pre>
+
+<p>
+You can use the following custom events and add your own code
+</p>
+
+<pre><code>
+$(document).ready(function() {
+  $("#all").on("beforeCheck", function() {
+    $(this).text('Un Check All');
+  });
+  $("#all").on("beforeUnCheck", function() {
+    $(this).text('Check All');
+  });
+});
+</code></pre>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Example</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>
+For a live demonstration visit:
+<a href="http://jsfiddle.net/berumen/nAs95/" target="_blank">tCheckAll demo</a>
+<br/>
+Or visit the official web page:
+<a href="http://berumen.github.io/tCheckAll/" target="_blank">Official site</a>
+</p>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>License</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Licensed under MIT license</p>
+
+
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Supported Browsers</h3>
+
+<p>
+Chrome<br />
+Safari 6.02+<br />
+Firefox 17+<br />
+IE 7+<br />
+Opera 12.11+<br />
+</p>
+
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Bug tracker</h3>
+<p>
+Have a bug? Please create an issue on GitHub at <a href="https://github.com/berumen/tCheckAll/issues">issues</a>
+</p>
+
+
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/berumen">berumen</a></p>
