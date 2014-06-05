@@ -1,0 +1,35 @@
+{
+  "name": "tCheckAll",
+  "title": "jQuery tCheckAll",
+  "description": "tCheckAll is a jquery plugin that allows you to check and uncheck all your checkboxes.",
+  "keywords": [
+    "jquery",
+    "checkbox",
+	"selection",	
+    "plugins"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Alfredo Berumen",
+    "url": "https://github.com/berumen"
+  },
+  "maintainers": [
+    {
+      "name": "Alfredo Berumen",
+      "url": "https://github.com/berumen"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "bugs": "https://github.com/berumen/tCheckAll/issues",
+  "homepage": "http://berumen.github.io/tCheckAll/",
+  "docs": "https://github.com/berumen/tCheckAll/blob/master/README.md",
+  "download": "https://github.com/berumen/tCheckAll/archive/master.zip",
+  "dependencies": {
+    "jquery": ">=1.9"
+  }
+}
