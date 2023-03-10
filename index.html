@@ -1,16 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <title>tCheckAll by berumen</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="stylesheets/styles.css" />
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -18,47 +18,87 @@
         <h1>tCheckAll</h1>
         <p>A simple way to select all your checkboxes</p>
 
-        <p class="view"><a href="https://github.com/berumen/tCheckAll">View the Project on GitHub <small>berumen/tCheckAll</small></a></p>
+        <p class="view">
+          <a href="https://github.com/berumen/tCheckAll"
+            >View the Project on GitHub <small>berumen/tCheckAll</small></a
+          >
+        </p>
 
         <ul>
-          <li><a href="https://github.com/berumen/tCheckAll/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/berumen/tCheckAll/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/berumen/tCheckAll">View On <strong>GitHub</strong></a></li>
+          <li>
+            <a href="https://github.com/berumen/tCheckAll/zipball/master"
+              >Download <strong>ZIP File</strong></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/berumen/tCheckAll/tarball/master"
+              >Download <strong>TAR Ball</strong></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/berumen/tCheckAll"
+              >View On <strong>GitHub</strong></a
+            >
+          </li>
         </ul>
       </header>
       <section>
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>tCheckAll, What is this?</h3>
+          <a
+            name="welcome-to-github-pages"
+            class="anchor"
+            href="#welcome-to-github-pages"
+            ><span class="octicon octicon-link"></span></a
+          >tCheckAll, What is this?
+        </h3>
 
-<p>tCheckAll is a jquery plugin that allows you to check or uncheck all your checkboxes. <br/>
-It was built using the jQuery library.</p>
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Author</h3>
+        <p>
+          tCheckAll is a jquery plugin that allows you to check or uncheck all
+          your checkboxes. <br />
+          It was built using the jQuery library.
+        </p>
+        <h3>
+          <a name="designer-templates" class="anchor" href="#designer-templates"
+            ><span class="octicon octicon-link"></span></a
+          >Author
+        </h3>
 
-<p>
-Copyright (c) 2014 Alfredo Berumen Saldivar
-<br/>
-<a target="_blank" href="http://berumen.pw" >http://berumen.pw</a>
-<br/>
-<a target="_blank" href="https://twitter.com/berumen" class="user-mention">@berumen</a>
-</p>
+        <p>
+          Copyright (c) 2023 Alfredo Berumen Saldivar
+          <br />
+          <a target="_blank" href="http://berumen.xyz">http://berumen.xyz</a>
+          <br />
+          <a
+            target="_blank"
+            href="https://twitter.com/berumen"
+            class="user-mention"
+            >@berumen</a
+          >
+        </p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>How to use</h3>
+        <h3>
+          <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"
+            ><span class="octicon octicon-link"></span></a
+          >How to use
+        </h3>
 
-<p>
-Include tCheckAll plugin in your website directory then load files in the
-<br/>
-section of your HTML document. Don't forget to add the jQuery library (version 1.9+).
-</p>
-<pre><code>
-&lt;script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"&gt;&lt;/script&gt;<br />
+        <p>
+          Include tCheckAll plugin in your website directory then load files in
+          the
+          <br />
+          section of your HTML document. Don't forget to add the jQuery library
+          (v >= 1.12.4)
+        </p>
+        <pre><code>
+&lt;script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"&gt;&lt;/script&gt;<br />
 &lt;script type="text/javascript" src="jquery.tcheckall.min.js"&gt;&lt;/script&gt;
 </code></pre>
-<p>
-Just put your 'Check All' link, button or any clickable element identified by an id inside a fieldset tag, use whatever name you wish for the id. For example:
-</p>
-<pre><code>
+        <p>
+          Just put your 'Check All' link, button or any clickable element
+          identified by an id inside a fieldset tag, use whatever name you wish
+          for the id. For example:
+        </p>
+        <pre><code>
 &lt;form id="my_id"&gt;<br />
   &lt;fieldset&gt;<br />
     &lt;legend&gt;Select&lt;/legend&gt;<br />
@@ -72,75 +112,82 @@ Just put your 'Check All' link, button or any clickable element identified by an
 &lt;/form&gt;
 </code></pre>
 
-<p>
-Trigger the plugin using the following code:
-</p>
+        <p>Trigger the plugin using the following code:</p>
 
-<pre><code>
+        <pre><code>
 $(document).ready(function() {
   $('#all').tCheckAll();      
 });
 </code></pre>
 
-<p>
-You can use the following custom events and add your own code
-</p>
+        <p>You can use the following custom events and add your own code</p>
 
-<pre><code>
-$(document).ready(function() {
-  $("#all").on("beforeCheck", function() {
-    $(this).text('Un Check All');
-  });
-  $("#all").on("beforeUnCheck", function() {
-    $(this).text('Check All');
-  });
-});
+        <pre><code>
+    $(document).ready(function() {
+    	$('#myCheck').tCheckAll({
+            checkTxt: 'Check',
+            unckeckTxt: 'Uncheck',
+            cheked: true,
+        });
+
+        $('#myNewCheck').tCheckAll({
+            cheked: true,
+        });
+    });
 </code></pre>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Example</h3>
+        <h3>
+          <a
+            name="authors-and-contributors"
+            class="anchor"
+            href="#authors-and-contributors"
+            ><span class="octicon octicon-link"></span></a
+          >Example
+        </h3>
 
-<p>
-For a live demonstration visit:
-<a href="http://jsfiddle.net/berumen/nAs95/" target="_blank">tCheckAll demo</a>
-<br/>
-Or visit the official web page:
-<a href="http://berumen.github.io/tCheckAll/" target="_blank">Official site</a>
-</p>
+        <p>
+          For a live demonstration visit:
+          <a href="https://codepen.io/berumen/pen/yLxPWPm" target="_blank"
+            >tCheckAll demo</a
+          >
+          <br />
+          Or visit the official web page:
+          <a href="http://berumen.github.io/tCheckAll/" target="_blank"
+            >Official site</a
+          >
+        </p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>License</h3>
+        <h3>
+          <a name="support-or-contact" class="anchor" href="#support-or-contact"
+            ><span class="octicon octicon-link"></span></a
+          >License
+        </h3>
 
-<p>Licensed under MIT license</p>
+        <p>Licensed under MIT license</p>
 
-
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Supported Browsers</h3>
-
-<p>
-Chrome<br />
-Safari 6.02+<br />
-Firefox 17+<br />
-IE 7+<br />
-Opera 12.11+<br />
-</p>
-
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Bug tracker</h3>
-<p>
-Have a bug? Please create an issue on GitHub at <a href="https://github.com/berumen/tCheckAll/issues">issues</a>
-</p>
-
-
+        <h3>
+          <a name="support-or-contact" class="anchor" href="#support-or-contact"
+            ><span class="octicon octicon-link"></span></a
+          >Bug tracker
+        </h3>
+        <p>
+          Have a bug? Please create an issue on GitHub at
+          <a href="https://github.com/berumen/tCheckAll/issues">issues</a>
+        </p>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/berumen">berumen</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p>
+          This project is maintained by
+          <a href="https://github.com/berumen">berumen</a>
+        </p>
+        <p>
+          <small
+            >Hosted on GitHub Pages &mdash; Theme by
+            <a href="https://github.com/orderedlist">orderedlist</a></small
+          >
+        </p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
   </body>
 </html>
